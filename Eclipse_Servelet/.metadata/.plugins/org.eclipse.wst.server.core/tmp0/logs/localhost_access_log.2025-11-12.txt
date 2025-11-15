@@ -1,0 +1,9 @@
+127.0.0.1 - - [12/Nov/2025:17:34:30 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [12/Nov/2025:17:34:31 +0530] "GET /ServExam/ HTTP/1.1" 200 253
+0:0:0:0:0:0:0:1 - - [12/Nov/2025:17:34:57 +0530] "GET /ServExam/HelloServlet HTTP/1.1" 200 54
+0:0:0:0:0:0:0:1 - - [12/Nov/2025:17:35:05 +0530] "GET /ServExam/HelloServlet HTTP/1.1" 200 54
+0:0:0:0:0:0:0:1 - - [12/Nov/2025:17:35:20 +0530] "GET /ServExam/HelloServlet HTTP/1.1" 200 54
+127.0.0.1 - - [12/Nov/2025:18:45:09 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [12/Nov/2025:18:45:10 +0530] "GET /ServExam/HelloServlet HTTP/1.1" 200 54
+0:0:0:0:0:0:0:1 - - [12/Nov/2025:18:45:46 +0530] "GET /ServExam/Hello.html HTTP/1.1" 200 157
+0:0:0:0:0:0:0:1 - - [12/Nov/2025:18:45:48 +0530] "GET /ServExam/HelloServlet HTTP/1.1" 200 54

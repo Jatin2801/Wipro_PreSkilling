@@ -1,0 +1,43 @@
+##############################
+# MAVEN
+##############################
+target/
+*.jar
+*.war
+*.ear
+
+##############################
+# ECLIPSE / IDEA / STS
+##############################
+.project
+.classpath
+.settings/
+.factorypath
+*.iml
+.idea/
+
+##############################
+# JAVA BUILD FILES
+##############################
+*.class
+*.log
+
+##############################
+# WEB PROJECTS (HTML/CSS/JS)
+##############################
+node_modules/
+dist/
+build/
+
+##############################
+# OPERATING SYSTEM FILES
+##############################
+.DS_Store
+Thumbs.db
+
+##############################
+# OTHER COMMON GARBAGE
+##############################
+*.tmp
+*.cache
+*.bak

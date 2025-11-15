@@ -1,0 +1,58 @@
+How we need to fetch the json data ???
+
+as we convert data into json format, as that json data to be displayed 
+in UI understandable format, then we need the help of fetch.
+
+fetch function allows you to retrieve data from the specific url. 
+
+  let url="https://jsonplaceholder.typicode.com/users";
+            function show() {
+                fetch(url)
+
+this fetch(url) function returns 2 promise values known as 
+
+resolve and reject 
+
+resolve ensures if the url fetched successfully then resolve will come
+
+reject ensures if the url fetched raises to exception, then it comes to reject.
+
+  fetch(url).then(res => res.json()).then(
+
+here, if url fetching is success then redirect data to json() format. 
+
+after json format print the data in your own format. 
+
+DOM (Document Object Model) 
+
+It represents the whole html document. Once html document loaded into the browser, it becomes a document object. It is the root element that represents the html document. It has properties and methods. By the help of document object, we can add dynamic content to our web page.
+
+Means if you want to add any tags or data at runtime DOM place the vital role. 
+
+DOM is a platform and language-neutral interface that allows programs and scripts t dynamically access and update the content, structure and style of document.
+
+getElementById()
+
+getElementByTagName()
+
+getElementsByName()
+
+setTimeOut() : allows you to close the window after specifici milliseconds time. 
+
+setInterval() : If you want to call any method for specific intervals of time, then we need the help of setInterval()
+
+Async and Await in JavaScript : 
+______________________________
+
+Async and await in javascript used to simplify handling asynchronous operations, using promises. By enabling asynchronous operations using promises, they enhance the code readability and make it easier to manage complex asynchronous flows. 
+
+Async Function : 
+
+The async function allows us to write promise-based code as if it were asynchronous. This ensures that the execution thread is not blocked. 
+
+Async functions retruns promise values. 
+
+Promise Handling : Asynch functions always returns a proimize. 
+
+Await keyword : Used to wait for promise to resolve. It can be used only within an async block. 
+

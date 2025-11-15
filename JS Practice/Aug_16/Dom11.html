@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+
+            function calc() {
+                var myWindow = window.open("page1.htm","Calculator","width=400, height=500");
+            }
+            function show() {
+                var myWindow = window.open("","MsgWindow","width=200, height=200");
+                myWindow.document.write("<p>This is Sample popup Window</p>");
+                myWindow.document.write("<p>From Wipro React Training Batch...</p>");
+                setTimeout(function() {
+                    myWindow.close();
+                }, 5000);
+            }
+        </script>
+    </head>
+<body>
+    <input type="button" value="Show Window" onclick="show()" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button" value="Calculator" onclick="calc()" />
+</body>
+</html>

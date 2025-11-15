@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var obj = new Date();
+                console.log(obj);
+                var result = "";
+                result +="Date is " +obj.getDate() + "<br/>";
+                result +="Month is "+obj.getMonth() +1 + "<br/>";
+                result +="Year is " +obj.getFullYear() + "<br/>";
+                result +="Time " +obj.getHours() + ":" +obj.getMinutes() + ":" +obj.getSeconds() + "<br/>";
+                document.getElementById("result").innerHTML = result;
+            }
+        </script>
+    </head>
+<body onload="show()">
+    <span id="result"></span>
+</body>
+</html>

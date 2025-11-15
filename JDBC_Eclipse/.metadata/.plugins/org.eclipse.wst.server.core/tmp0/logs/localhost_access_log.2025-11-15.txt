@@ -1,0 +1,7 @@
+127.0.0.1 - - [15/Nov/2025:10:43:29 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [15/Nov/2025:10:43:29 +0530] "GET /BankJstlProject/SearchAccount.jsp HTTP/1.1" 200 346
+0:0:0:0:0:0:0:1 - - [15/Nov/2025:10:43:33 +0530] "GET /BankJstlProject/SearchAccount.jsp?accountNo=1 HTTP/1.1" 500 5182
+127.0.0.1 - - [15/Nov/2025:10:44:30 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [15/Nov/2025:10:44:31 +0530] "GET /BankJstlProject/SearchAccount.jsp HTTP/1.1" 200 346
+0:0:0:0:0:0:0:1 - - [15/Nov/2025:10:44:35 +0530] "GET /BankJstlProject/SearchAccount.jsp?accountNo=1 HTTP/1.1" 200 715
+0:0:0:0:0:0:0:1 - - [15/Nov/2025:10:44:44 +0530] "GET /BankJstlProject/SearchAccount.jsp?accountNo=2 HTTP/1.1" 200 732

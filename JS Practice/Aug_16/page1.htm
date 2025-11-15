@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>Normal Calculator</title>
+		<link type="text/css" rel="stylesheet" href = "cssLiberty1.css"/>
+		<script type="text/javascript" language="javascript" src="jsLiberty1.js">
+		</script>
+	</head>
+	<body>
+		<p class = "title" >
+			Online calculator
+		</p>
+		<div class = "MainForm" align = "center" >		
+			<form name = "ipForm" size = 35 id = "CalculatorForm1" action = "" method = "GET">
+				 <p class = "msg">...</p>
+				 <input type = "text" value = "" readonly = "true" id = "display" class = "output">
+				 <br/><br/><br/>
+				 <input class = "numbers" type = "button" value = "   7   " id = "7" onClick = "setDigit(7)"/>
+				 <input class = "numbers" type = "button" value = "   8   " id = "8" onClick = "setDigit(8)"/>
+				 <input class = "numbers" type = "button" value = "   9   " id = "9" onClick = "setDigit(9)"/>
+				 <input class = "operators" type = "button" value = "   +   " id = "a" onClick = "operation(1)"/>
+				 
+				 <br/>
+				 <input class = "numbers" type = "button" value = "   4   " id = "4" onClick = "setDigit(4)"/>
+				 <input class = "numbers" type = "button" value = "   5   " id = "5" onClick = "setDigit(5)"/>
+				 <input class = "numbers" type = "button" value = "   6   " id = "6" onClick = "setDigit(6)"/>
+				 <input class = "operators" type = "button" value = "   -   " id = "s" onClick = "operation(2)"/>
+				 
+				 <br/>
+				 <input class = "numbers" type = "button" value = "   1   " id = "1" onClick = "setDigit(1)"/>
+				 <input class = "numbers" type = "button" value = "   2   " id = "2" onClick = "setDigit(2)"/>
+				 <input class = "numbers" type = "button" value = "   3   " id = "3" onClick = "setDigit(3)"/>
+				 <input class = "operators" type = "button" value = "   *   " id = "m" onClick = "operation(3)"/>
+				 
+				 <br/>
+				 <input class = "numbers" type = "button" value = "   0   " id = "0" onClick = "click0()"/>				 
+				 <input class = "numbers" type = "button" value = "   .   " id = "e" onClick = "setDigit(88)"/>				 
+				 <input class = "operators" type = "button" value = "C" onClick = "clearMe()"/>	
+				 
+				 <input class = "operators" type = "button" value = "   /   " id = "d" onClick = "operation(4)"/>
+				 
+				 <br/>					 			 
+				 <br/>
+				 <input class = "operators" type = "button" value = "   =   " id = "e" onClick = "operation(5)"/>
+				 			 
+			</form>	
+		</div> 
+	</body>
+</html>

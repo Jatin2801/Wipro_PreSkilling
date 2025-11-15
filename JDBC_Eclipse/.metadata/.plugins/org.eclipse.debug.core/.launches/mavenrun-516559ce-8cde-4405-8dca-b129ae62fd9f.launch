@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.m2e.Maven2LaunchConfigurationType">
+    <booleanAttribute key="M2_BATCH" value="true"/>
+    <stringAttribute key="M2_GOALS" value="-U archetype:generate"/>
+    <listAttribute key="M2_PROPERTIES">
+        <listEntry value="archetypeGroupId=org.glassfish.jersey.archetypes"/>
+        <listEntry value="archetypeArtifactId=jersey-quickstart-webapp"/>
+        <listEntry value="archetypeVersion=4.0.0"/>
+        <listEntry value="groupId=Wipro"/>
+        <listEntry value="artifactId=LmsWipro"/>
+        <listEntry value="version=0.0.1-SNAPSHOT"/>
+        <listEntry value="package=com.java.lms"/>
+        <listEntry value="outputDirectory=/Users/jatin/Documents/Wipro/JDBC_Eclipse"/>
+    </listAttribute>
+    <booleanAttribute key="M2_SAVE_BEFORE_LAUNCH" value="false"/>
+    <booleanAttribute key="org.eclipse.debug.ui.private" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="/var/folders/46/_gqn2w010v1_y_nn4vvc5r280000gn/T/m2e-archetypeGenerator2385369684757218245"/>
+</launchConfiguration>

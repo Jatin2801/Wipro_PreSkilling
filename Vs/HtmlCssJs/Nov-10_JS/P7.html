@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <script>
+            function doLogin() {
+                var user,pwd;
+                user = frmLogin.userName.value;
+                pwd = frmLogin.passCode.value;
+                if (user=="Wipro" && pwd == "Wipro") {
+                    alert("Correct");
+                } else {
+                    document.getElementById("error").innerHTML="Invalid Credentials...";
+                }
+            }
+        </script>
+    </head>
+<body>
+    <form name="frmLogin">
+        <table border="3" align="center">
+            <tr>
+                <th colspan="2">Login Page</th>
+            </tr>
+            <tr>
+                <th>User Name</th>
+                <td>
+                    <input type="text" name="userName" /> 
+                </td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>
+                    <input type="password" name="passCode" />
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Login" onclick="doLogin()" />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="reset" value="Reset" />
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <span id="error" style="color: red;" />
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

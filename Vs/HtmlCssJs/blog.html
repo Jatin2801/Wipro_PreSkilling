@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        body {
+            background-color: rgb(187, 234, 210);
+            font-family: 'Times New Roman', Times, serif;
+            position: relative;
+        }
+        p {
+            text-align: center; 
+            margin-left: 9rem;
+            margin-right: 9rem;
+            font-size: x-large;
+        }
+        img {
+            width: 3%;
+            height: 3%;
+            margin-top: 10px;
+            margin-left: 1rem;
+        }
+
+        .comment-section {
+            background-color: rgb(247, 243, 243);
+            border-radius: 25px;
+            width: 60%;
+            margin: 2rem auto;
+            padding: 1.5rem;
+        }
+        .comment-section h2 {
+            text-align: center;
+            color: rgb(55, 69, 5);
+        }
+        .comment-section input, 
+        .comment-section textarea {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .comment-section button {
+            background-color: rgb(55, 69, 5);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .comment-section button:hover {
+            background-color: rgb(77, 97, 10);
+        }
+
+        .nav-button {
+            position: fixed;
+            top: 50%;
+            background-color: rgb(55, 69, 5);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .nav-button:hover {
+            background-color: rgb(77, 97, 10);
+        }
+        .prev-button {
+            left: 2rem;
+        }
+        .next-button {
+            right: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex;">
+        <h3>Blog</h3>
+        <img src="https://cdn-icons-png.flaticon.com/512/10026/10026257.png" alt="">
+    </div>
+    
+    <h1 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;">AI Tools</h1>
+    <div style="display: flex; color: rgb(55, 69, 5); justify-content: space-between; align-items: center;">
+        <h3>Author : Jatin</h3>
+        <h3>Date : 8/11/25</h3>
+    </div>
+
+    <p>In just a few short years, artificial intelligence has quietly shifted from being a futuristic concept to something that hums in the background of our everyday routines. It’s no longer confined to tech labs or sci-fi stories — it’s in our browsers, our inboxes, and even our note-taking apps. What’s fascinating is how seamlessly it’s blended into daily work, often without us even realizing it.
+    Take email, for example. Most of us have already collaborated with AI more times than we can count. Gmail’s Smart Reply suggests phrases before we’ve even finished typing. Outlook’s Copilot drafts entire responses, summarizes long threads, and schedules meetings on our behalf. What used to take minutes — even hours — now takes seconds. For marketers, teachers, writers, and small business owners, this isn’t about learning to “code with AI”; it’s about learning to think with AI. It’s not a tool you pick up occasionally — it’s becoming a quiet coworker that sits alongside you every day.
+    The biggest advantage? Time. AI doesn’t just make us faster — it changes how we spend our time altogether. Tasks that once drained our focus — transcribing meetings, summarizing reports, generating content drafts, formatting data — are now handled in the background. That frees us to focus on what truly requires human insight: strategy, creativity, empathy, and connection. In that sense, AI isn’t replacing work — it’s reshaping it. It’s moving us from doing more to thinking better.
+    But this new landscape also calls for balance. The goal isn’t to let AI think for us, but to let it think with us. The smartest workers today aren’t the ones resisting automation, nor the ones blindly trusting it — they’re the ones who understand when to rely on AI and when to step in themselves. They know that judgment, context, and nuance are still deeply human strengths.
+    So the next time you notice yourself completing a task faster than ever — writing an email that almost writes itself, summarizing a meeting before you’ve had your coffee — take a moment to pause. There’s a good chance AI lent a quiet hand somewhere along the way. And as these tools continue to evolve, that invisible collaboration between human and machine will only deepen — not as a replacement for our abilities, but as an extension of them.
+    Because in the end, the future of work isn’t about humans versus AI. It’s about humans with AI — and what we can accomplish together when technology handles the busywork, and we focus on what truly matters.</p>
+
+    <div class="comment-section">
+        <h2>Leave a Comment</h2>
+        <form>
+            <label><b>Name:</b></label><br>
+            <input type="text" placeholder="Enter your name"><br><br>
+
+            <label><b>Comment:</b></label><br>
+            <textarea rows="5" placeholder="Write your comment here..."></textarea><br><br>
+
+            <button type="button">Submit</button>
+        </form>
+    </div>
+
+    <button class="nav-button prev-button">← </button>
+    <button class="nav-button next-button"> →</button>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+div.MainForm
+{
+	width : 250px;
+	padding : 10px;
+	margin : 10 auto;
+	border : 5px solid gray;
+	vertical-align : center;
+	background : #3366CC;
+}
+p.title 
+{
+	font-size:60px;
+	color : #33CCFF;
+	font-family : "DejaVu Sans";
+	font-weight: bold;
+	
+}
+p.msg
+{
+	text-align : right;	
+	font-weight: bold;
+	font-size : 15px;
+	color : #FFFFFF;
+	font-family : "Arial";
+}
+input.output
+{		
+	font-weight: bold;
+	text-align : right;
+	font-size : 19px;
+}
+
+input.numbers
+{
+	font-weight: bold;
+	font-size : 15px;
+	width : 50px;
+}
+input.operators
+{
+	width : 50px;
+	font-weight: bold;
+	color : red;
+	background : #CCCCCC;
+	font-size : 15px;
+}
+body 
+{
+	text-align : center;
+} 

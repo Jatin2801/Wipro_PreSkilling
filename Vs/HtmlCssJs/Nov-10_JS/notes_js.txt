@@ -1,0 +1,39 @@
+javascript : JavaScript allows you to perform
+
+	-> Business Calculations
+
+	-> Validations
+
+	-> Event-based Programming.
+
+You can start javascript, by using 
+
+<script>
+</script> 
+
+You can define any method using function keyword.
+
+function function_name() {
+...
+...
+...
+}
+
+alert() : used to display any value or message. 
+
+Events : 
+
+onload() : This event fires once you run the page. 
+
+onclick() : This event fires automatically once you
+click on the button. 
+
+You can declare variable in javascript, by using var keyword
+
+var variable_name;
+
+
+
+
+
+

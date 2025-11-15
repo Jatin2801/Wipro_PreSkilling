@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <script>
+            function doLogin() {
+                if (frmLogin.userName.value=="") {
+                    document.getElementById("error1").innerHTML = "Please Enter Your UserName...";
+                    return;
+                } else {
+                    document.getElementById("error1").innerHTML = "";
+                }
+                if (frmLogin.passCode.value=="") {
+                    document.getElementById("error2").innerHTML = "Please Enter Your Password...";
+                    return;
+                } else {
+                    document.getElementById("error2").innerHTML = "";
+                }
+                
+                var user,pwd;
+                user = frmLogin.userName.value;
+                pwd = frmLogin.passCode.value;
+                if (user=="Wipro" && pwd == "Wipro") {
+                    // alert("Correct");
+                    window.open("http://www.google.com");
+                } else {
+                    document.getElementById("error").innerHTML="Invalid Credentials...";
+                }
+            }
+        </script>
+    </head>
+<body>
+    <form name="frmLogin" action="javascript:doLogin()">
+        <table border="3" align="center">
+            <tr>
+                <th colspan="2">Login Page</th>
+            </tr>
+            <tr>
+                <th>User Name</th>
+                <td>
+                    <input type="text" name="userName" /> 
+                    <span id="error1" style="color: red;" />
+                </td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>
+                    <input type="password" name="passCode" />
+                    <span id="error2" style="color: red;" />
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="submit" value="Login"  />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="reset" value="Reset" />
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <span id="error" style="color: red;" />
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

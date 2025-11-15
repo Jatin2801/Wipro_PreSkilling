@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script>
+            var questions = new Array(
+                "1. What is Object Oriented Programming",
+                "2. What is Stack and Heap",
+                "3. Explain about Boxing and Unboxing",
+                "4. What is JVM",
+                "5. Explain about Arrays in Java"
+            );
+            var qusetionNo = 0;
+            var totalQuestions = questions.length;
+
+            function load(){
+                document.getElementById("question").innerHTML = questions[qusetionNo];
+            }
+
+            function prevQuestion() {
+                qusetionNo--;
+                if (qusetionNo < 0) {
+                    qusetionNo = 0;
+                    alert("No Questions Before That...");
+                }
+                load();
+            }
+            function nextQuestion() {
+                qusetionNo++;
+                if (qusetionNo == totalQuestions) {
+                    qusetionNo = totalQuestions -1;
+                    alert("No Questions after this");
+                }
+                load();
+            }
+        </script>
+    </head>
+<body onload="load()">
+    <center>
+     <p id="question"></p> <br/>
+     <input type="button" value="Next" onclick="nextQuestion()" />
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <input type="button" value="Previous" onclick="prevQuestion()" />
+    </center>
+</body>
+</html>

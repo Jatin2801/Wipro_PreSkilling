@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script>
+            function show() {
+                var myWindow = window.open("","MsgWindow","width=200, height=200");
+                myWindow.document.write("<p>This is Sample popup Window</p>");
+                myWindow.document.write("<p>From Wipro React Training Batch...</p>");
+                setTimeout(function() {
+                    myWindow.close();
+                }, 5000);
+            }
+        </script>
+    </head>
+<body>
+    <input type="button" value="Show Window" onclick="show()" />
+</body>
+</html>
