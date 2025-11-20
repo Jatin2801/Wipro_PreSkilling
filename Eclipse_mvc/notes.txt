@@ -1,0 +1,85 @@
+
+
+MVC 
+
+	Model
+
+	View
+
+	Controller
+
+Spring MVC is a java framework that follows the Model-View-Controller (MVC) pattern for developing web applications. 
+
+till 
+
+-> User Service
+
+-> Business Layer
+
+-> Data Layers
+
+Here, each layer tightly binded with with another layer. As changes in one layer will have huge impact on another layer. This kind of the problem we need to overcome then we need the help of MVC. 
+
+MVC allows you to create any light-weight web application, and simply we say we need to make any application as loosely coupled and tightly integrated, then we need the help of MVC. 
+
+
+MVC Contains 3 parts as
+
+(i) Model : The model encapsulates the application data. 
+
+(ii) View : The view renders the model data and generates HTML output that the client's browser can interpret. Preferrably we can use jsp pages as UI purpose of input and any error message to be taken care.
+
+(iii) Controller : The controller processes the user requests and passes them to the view of rendering. The controller is the heart w.r.t. MVC environment as based on action name it would be redirected to corresponding business logic page. 
+
+The controller in Spring MVC can be annotated with @Controller annotation, and the mapping to be method will be defined by using @RequestMapping annotation. As the @RequestMapping maps web requests to specific controller methods. 
+
+In MVC we have 2 major controllers known as 
+
+FrontController
+
+DispatcherServlet 
+__________________
+
+The DispatcherServlet is the central component of Spring MVC
+
+-> Acts as the front controller for all HTTP requests
+-> Determines the appropriate controller to handle a request
+-> Dispatches the request to the selected controller
+-> Resolves the view using the view resolver and renders the response. 
+
+MVC application flow : 
+_____________________
+
+1) Whenever you send any request to the spring mvc page, first DispatcherServlet redirects to HandlerMapping 
+
+2) This handlerMapping transfer to controller where based on the requestmapping url it handled to the corresponding business method. 
+
+3) Then the controller will be redirected to corresponding view. 
+
+4) Then the viewResolver will be redirected to the corresponding view. 
+
+5) There we can see the result (response)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
