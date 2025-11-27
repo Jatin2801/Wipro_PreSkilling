@@ -1,4 +1,4 @@
-package com.java.hib;
+package com.java.hibernatelibraryproject.resources;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

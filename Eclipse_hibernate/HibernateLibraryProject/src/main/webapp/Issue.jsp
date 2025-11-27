@@ -1,4 +1,4 @@
-<%@page import="com.java.hib.MainProg"%>
+<%@page import="com.java.hibernatelibraryproject.resources.MainProg"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
@@ -19,24 +19,24 @@
 	<jsp:include page="menu.jsp" />
 	<!-- My Method -->
 	<%
-		String sbook[] = request.getParameterValues("bookid");
-		String user = (String) session.getAttribute("user");
-		int bid;
-		if (sbook != null) {
-			for (int i = 0; i < sbook.length; i++) {
-				bid = Integer.parseInt(sbook[i]);
-				String res = new MainProg().issuedOrNot(user, bid);
+	String sbook[] = request.getParameterValues("bookid");
+			String user = (String) session.getAttribute("user");
+			int bid;
+			if (sbook != null) {
+		for (int i = 0; i < sbook.length; i++) {
+			bid = Integer.parseInt(sbook[i]);
+			String res = new MainProg().issuedOrNot(user, bid);
 
-				if (res.equals("yes")) {
+			if (res.equals("yes")) {
 
-					out.println("Book is already issued with id" + bid + "<br/> So it cannot be issued again <br>");
-				} else {
-					out.println("Book issued successfully for id" + bid + "<br/>");
-					SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-					Date idate = new Date();
-					String issuedate = sdf.format(idate);
+				out.println("Book is already issued with id" + bid + "<br/> So it cannot be issued again <br>");
+			} else {
+				out.println("Book issued successfully for id" + bid + "<br/>");
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+				Date idate = new Date();
+				String issuedate = sdf.format(idate);
 	%>
-	<jsp:useBean id="bean1" class="com.java.hib.TransBook" />
+	<jsp:useBean id="bean1" class="com.java.hibernatelibraryproject.resources.TransBook" />
 	<jsp:setProperty property="userName" name="bean1" value="<%=user%>" />
 	<jsp:setProperty property="bookId" name="bean1" value="<%=bid%>" />
 	<jsp:setProperty property="fromDate" name="bean1" value="<%=issuedate%>" />

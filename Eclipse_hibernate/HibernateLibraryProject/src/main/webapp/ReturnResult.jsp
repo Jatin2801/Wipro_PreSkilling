@@ -1,57 +1,48 @@
-<%@page import="com.java.hib.MainProg"%>
-<%@page import="java.text.SimpleDateFormat"%>
-<%@page import="java.util.Date"%>
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.PreparedStatement"%>
-<%@page import="java.sql.Connection"%>
-<%@page import="java.sql.DriverManager"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<script>
-	function show(fine) {
-		alert("You have to pay a fine of Rs. " + fine);
-	}
-</script>
-<body>
-	<jsp:include page="menu.jsp" />
-	<%
-		String rbook[] = request.getParameterValues("bookid");
-		String user = (String) session.getAttribute("user");
-		int bid;
-		if (rbook != null) {
-			for (String s : rbook)
-			{
-				bid = Integer.parseInt(s);
-				int days = new MainProg().returnBooks(bid, user);
-				
-				if(days==-1){
-					out.write("Books Couldnot be Returned...");
-				}
-				else{
-					out.write("Book Returned Successfully...");
-				}
-				if (days ==0) {
-					int fine = 5 * (days+1 - 7);
-					out.println("<body><script> alert('Pay fine of Rs " + fine + " for the past " + (days - 7)
-							+ " days')</script></body>");
-				}
-				// out.println("Pay a fine of Rs.<font color='red'> "+fine +"</font> for the past "+(days-7)+" days");   
+<%@ page import="com.java.hibernatelibraryproject.resources.TransBook" %>
+<%@ page import="com.java.hibernatelibraryproject.resources.TransReturn" %>
+<%@ page import="com.java.hibernatelibraryproject.resources.MainProg" %>
+<%@ page import="com.java.hibernatelibraryproject.resources.TransBook" %>
+<%@ page import="com.java.hibernatelibraryproject.resources.TransReturn" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.text.ParseException" %>
 
-			}
-		} else
-			out.println("No books selected!!!" + "<br/>");
-	%>
-</body>
-</html>
 
-<!--String to Date
- String startDateStr = request.getParameter("startDate");
-SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-//surround below line with try catch block as below code throws checked exception
-Date startDate = sdf.parse(startDateStr);-->
+<%
+    String rbook[] = request.getParameterValues("bookid");
+    String user = (String) session.getAttribute("user");
+    int bid;
+
+    try {
+        MainProg obj = new MainProg(); 
+
+        if (rbook != null) {
+            for (String s : rbook) {
+                bid = Integer.parseInt(s);
+
+                int fine = obj.returnBooks(bid, user); 
+
+                if (fine == -1) {
+                    out.println("<h3>Book with ID " + bid + 
+                        " could not be returned. Not found in your issued list.</h3>");
+                } 
+                else {
+                    out.println("<h3>Book with ID " + bid + 
+                        " returned successfully! " + 
+                        (fine > 0 ? "Fine: Rs " + fine : "No fine") + 
+                        "</h3>");
+
+                    if (fine > 0) {
+                        out.println("<script>showFine(" + fine + ");</script>");
+                    }
+                }
+            }
+        } 
+        else {
+            out.println("<h3>No books selected!</h3>");
+        }
+    } 
+    catch(Exception e) {
+        out.println("<h3>Error while returning books: " + e.getMessage() + "</h3>");
+        e.printStackTrace();
+    }
+%>

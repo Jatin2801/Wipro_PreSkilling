@@ -1,5 +1,5 @@
-<%@page import="com.java.hib.MainProg"%>
-<%@page import="com.java.hib.TransReturn"%>
+<%@page import="com.java.hibernatelibraryproject.resources.MainProg"%>
+<%@page import="com.java.hibernatelibraryproject.resources.TransReturn"%>
 <%@page import="java.util.List"%>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"

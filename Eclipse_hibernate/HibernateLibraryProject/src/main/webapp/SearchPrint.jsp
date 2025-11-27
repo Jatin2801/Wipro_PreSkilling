@@ -2,9 +2,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
-    <%@ page import="com.java.hib.Books" %>
+    <%@ page import="com.java.hibernatelibraryproject.resources.Books" %>
     <%@ page import="java.util.List" %>
-     <%@ page import="com.java.hib.MainProg" %>
+     <%@ page import="com.java.hibernatelibraryproject.resources.MainProg" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
